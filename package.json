@@ -51,6 +51,7 @@
     "serviceBaseURL": ""
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "can-component": "^4.0.2",
     "can-connect": "^2.0.2",
     "can-define": "^2.0.1",
