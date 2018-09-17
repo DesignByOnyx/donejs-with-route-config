@@ -1,0 +1,11 @@
+<nav><ul>
+  {{#each items}}
+    <li>
+      {{#if(isCurrent)}}
+        {{title}}
+      {{else}}
+        <a href={{url}}>{{title}}</a>
+      {{/if}}
+    </li>
+  {{/each}}
+</ul></nav>

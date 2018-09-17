@@ -3,10 +3,29 @@
     <title>{{title}}</title>
   </head>
   <body>
+    <can-import from="can-stache-bindings" />
+    <can-import from="bootstrap/less/bootstrap.less" />
     <can-import from="~/styles.less" />
     <can-import from="~/app" export-as="viewModel" />
+    <can-import from="~/navigation/navigation" />
 
-    <h1>{{message}}</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <main-nav />
+        </div>
+        <div class="col-sm-9">
+          <div>Current Module ID: {{moduleId}}</div>
+          <hr />
+
+          {{#if(currentModule)}}
+            {{{currentModule}}}
+          {{else}}
+            Loading...
+          {{/if}}
+        </div>
+      </div>
+    </div>
 
     {{#switch env.NODE_ENV}}
       {{#case "production"}}
